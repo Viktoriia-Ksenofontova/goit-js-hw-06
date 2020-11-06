@@ -127,14 +127,98 @@
 // console.log(total);
 
 // ------
-const cart = [
-  { label: 'Apples', price: 100, quantity: 2 },
-  { label: 'Bananas', price: 120, quantity: 3 },
-  { label: 'Lemons', price: 70, quantity: 4 },
-];
+// const cart = [
+//   { label: 'Apples', price: 100, quantity: 2 },
+//   { label: 'Bananas', price: 120, quantity: 3 },
+//   { label: 'Lemons', price: 70, quantity: 4 },
+// ];
 
-const totalAmount = cart.reduce(function (total,item) {
-  return total + item.price * item.quantity;
-}, 0);
+// const totalAmount = cart.reduce(function (total,item) {
+//   return total + item.price * item.quantity;
+// }, 0);
   
-console.log(totalAmount);
+// console.log(totalAmount);
+
+
+// Setup ---freeCodeCamp
+// var contacts = [
+//     {
+//         "firstName": "Akira",
+//         "lastName": "Laine",
+//         "number": "0543236543",
+//         "likes": ["Pizza", "Coding", "Brownie Points"]
+//     },
+//     {
+//         "firstName": "Harry",
+//         "lastName": "Potter",
+//         "number": "0994372684",
+//         "likes": ["Hogwarts", "Magic", "Hagrid"]
+//     },
+//     {
+//         "firstName": "Sherlock",
+//         "lastName": "Holmes",
+//         "number": "0487345643",
+//         "likes": ["Intriguing Cases", "Violin"]
+//     },
+//     {
+//         "firstName": "Kristian",
+//         "lastName": "Vos",
+//         "number": "unknown",
+//         "likes": ["JavaScript", "Gaming", "Foxes"]
+//     }
+// ];
+
+
+// function lookUpProfile(name, prop) {
+// // Only change code below this line
+//   for (let contact of contacts) {
+//     if (contact.firstName === name) {
+//       for (let key in contact) {
+//         if (key === prop) {
+//           return contact[key];
+//         }
+//       }
+//       return "No such property";
+//     }
+//   }
+//   return "No such contact";
+// // Only change code above this line
+//   }
+
+// console.log(lookUpProfile("Akira", "likes"));
+
+// console.log(lookUpProfile("Kristian", "lastName"));
+// console.log(lookUpProfile("Sherlock", "likes"));
+// console.log(lookUpProfile("Harry", "likes"));
+// console.log(lookUpProfile("Bob", "number"));
+// console.log(lookUpProfile("Akira", "address"));
+
+
+
+// -------рекурсия
+// function countdown(n){
+//   if (n<1){
+//     return [];
+//   } else {
+//      const countArray=countdown(n-1);
+//      countArray.unshift(n);
+// return countArray;
+//   }
+  
+// }
+// console.log(countdown(10));
+//----------------
+function rangeOfNumbers(startNum, endNum) {
+    if (startNum === endNum) {
+    return [startNum];
+  } else {
+     const numbers=rangeOfNumbers(startNum,endNum-1);
+     numbers.push(endNum);
+  
+     
+return numbers;
+  }
+  
+};
+
+console.log(rangeOfNumbers(6, 9));
